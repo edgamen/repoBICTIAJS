@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "A-Gothique-Time";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("../fuentes/A-Gothique-Time.ttf") format("truetype");
+}
+
+body{
+    /*font-family: 'Shadows Into Light', cursive;
+    font-family: 'Libre Baskerville', serif;*/
+    font-family: "A-Gothique-Time";
+}
+footer{
+    font-family: 'Shadows Into Light', cursive;
+}
