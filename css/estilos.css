@@ -4,12 +4,7 @@
     font-weight: normal;
     src: local("?"), url("../fuentes/Faith Collapsing.ttf") format("truetype");
 }
-@font-face {
-    font-family: "REBUFFED";
-    font-style: normal;
-    font-weight: normal;
-    src: local("?"), url("../fuentes/REBUFFED.ttf") format("truetype");
-}
+
 * {
     box-sizing: border-box;
 }
@@ -58,27 +53,36 @@
 
 
 body{
-    background-image: url(../images/headerMain.jpg);
-    /*font-family: 'Shadows Into Light', cursive;
+    background-color: #A0A0A0;
+    /*background-image: url(../images/headerMain.jpg);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    font-family: 'Shadows Into Light', cursive;
     font-family: 'Libre Baskerville', serif;*/
     font-family: "Faith Collapsing";
+    color: black;
+    font-size: 2em;
 }
 header{
-    
+    display: inline-block;
     
 }
 h1{
+    color: darkred;
     align-self: center;
 }
-header nav{
+h2{
+    margin: 1% 1%;
+}
+ nav{
     /*background-color: rgb(53, 99, 163);*/
-    float: right;
+    
     /*width: 100%;*/
     text-align: center;
     
     /*margin:0px auto;*/
 }
-header nav ul{
+nav ul{
    
     overflow: hidden;
     list-style-type: none;
@@ -89,21 +93,108 @@ header nav ul{
     text-align: center;
 
 }
+ nav ul:hover{
+   
+    overflow: hidden;
+    list-style-image: url("../images/chtulhu.gif");
+    padding-left: 0px;
+    height: 100%;
+    
+    margin: 0;
+    text-align: center;
+
+}
+ nav ul li{
+    font-size: 2.5em;
+    display: inline-block;
+}
+
+ nav ul li:hover{
+    font-size: 2.5em;
+}
+
+ nav ul li a{
+    color: black;  
+    
+	display:block;
+    text-decoration: none;
+}
+ nav ul li a:hover{
+    color: black;  
+    list-style-image: url("../images/chtulhu.gif");
+	display:block;
+    /*text-decoration: none;*/
+}
+
+
+   
 #cajaSponsor{
+    background-image: url(../images/headerMain.jpg);
+    height: inherit;
+    float: right;
+    
+}
+nav{
     float: right;
 }
 #cajaAutor{
     float: left;
+    
+}
+#cajaCoautor{
+    width: 100%;
+}
+#coautor{
+    width: 100%;
 }
 header nav ul{
     float: right;
 }
 #autor{
     width: 100%;
+   
 }
 #sponsor{
     width: 100%;
+    
+}
+main{
+    display: inline-block;
+}
+#left{
+/*display: inline-block;*/
+float: left;
+
+}
+#center{
+float: left;
+text-align: justify;
+}
+article{
+    float: left;
+}
+figure{
+    margin: 0%;
+    float: right;
+}
+p{
+    margin: 1% 2%;
+}
+#right{
+    margin-left: 2px;
+    font-size: 0.7em;
+    float: left;
+    text-align: justify;
 }
 footer{
-    font-family: "REBUFFED";
+    
+    border: 1px solid yellow;
+}
+#redessociales{
+    float: left;
+    text-align: center;
+}
+#contacto{
+    float: right;
+    text-align: center;
 }
