@@ -119,12 +119,7 @@ nav ul{
 	display:block;
     text-decoration: none;
 }
- nav ul li a:hover{
-    color: black;  
-    list-style-image: url("../images/chtulhu.gif");
-	display:block;
-    /*text-decoration: none;*/
-}
+ 
 
 
    
@@ -187,9 +182,17 @@ p{
     text-align: justify;
 }
 footer{
+    color: red;
     
-    border: 1px solid yellow;
+    
 }
+footer ul{
+    list-style-type: none;
+}
+footer ul li a{
+    text-decoration: none;
+}
+
 #redessociales{
     float: left;
     text-align: center;
