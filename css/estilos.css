@@ -75,12 +75,7 @@ h2{
     margin: 1% 1%;
 }
  nav{
-    /*background-color: rgb(53, 99, 163);*/
-    
-    /*width: 100%;*/
     text-align: center;
-    
-    /*margin:0px auto;*/
 }
 nav ul{
    
@@ -119,9 +114,6 @@ nav ul{
 	display:block;
     text-decoration: none;
 }
- 
-
-
    
 #cajaSponsor{
     background-image: url(../images/headerMain.jpg);
@@ -157,7 +149,7 @@ main{
     display: inline-block;
 }
 #left{
-/*display: inline-block;*/
+
 float: left;
 
 }
