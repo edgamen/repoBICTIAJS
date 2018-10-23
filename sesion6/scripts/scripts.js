@@ -119,26 +119,3 @@ document.write("Calcular si un numero es primo y/o par.",'<br/>');
 					}
                 }
                 
-
-                var j, nuevapalabra;
-                var longitud{palabra};
-				var palabra = new String();
-				var tamanopalabra = new Number();
-				var cantidadespacios = new Number();
-				document.write("Algoritmo para invertir una cadena de caracteres ingresada,determinando su longitud.",'<BR/>');
-				document.write(" ",'<BR/>');
-				document.write("Ingrese una palabra o frase, por favor:",'<BR/>');
-				palabra = prompt();
-				palabra = String.toLowerCase(palabra);
-				tamanopalabra = palabra.length;
-				for (j=palabra.length;j<=1;j++) {
-					nuevapalabra = String.substring(palabra,j-1,j);
-					if (nuevapalabra==" ") {
-						cantidadespacios = cantidadespacios+1;
-					}
-					document.write(nuevapalabra);
-				}
-				document.write(" ",'<BR/>');
-				document.write("La longitud de la palabra o frase ingresada es:",tamanopalabra," caracteres, incluyendo ",cantidadespacios," espacios.",'<BR/>');
-				document.write("La cantidad de LETRAS es: ",tamanopalabra-cantidadespacios,'<BR/>');
-				document.write("La cantidad de ESPACIOS es: ",cantidadespacios,'<BR/>');
