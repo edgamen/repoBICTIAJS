@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas multiplicar</title>
+</head>
+<body>
+        <script type="text/javascript">
+			
+
+				function tablasmultiplicacion() {
+				var numerouno = new Number();
+				var numerodos = new Number();
+				numerouno = 0;
+				document.write("Generar las tablas de multiplicar hasta el numero 10.",'<br/>');
+				for (numerouno=numerouno+1;numerouno<=10;numerouno++) {
+					numerodos = 0;
+					for (numerodos=numerodos+1;numerodos<=10;numerodos++) {
+						document.write(numerouno," x ",numerodos," = ",numerouno*numerodos,".",'<br/>');
+					}
+				}
+			}
+			tablasmultiplicacion();
+		</script>
+</body>
+</html>

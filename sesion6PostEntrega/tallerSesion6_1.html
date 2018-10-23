@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Porcentaje perdida materia</title>
+</head>
+<body>
+
+        <script type="text/javascript">
+			
+
+			document.write("Algoritmo para calcular el porcentaje de estudiantes que pierden una asignatura.",'<br/>');
+			function porcentajeperdidamateria() {
+				var cantidadestudiantes = new Number();
+				var contador = new Number();
+				var nota = new Number();
+				var acumulador = new Number();
+				
+				alert("Por favor, ingrese la cantidad de estudiantes a calificar:");
+				cantidadestudiantes = Number(prompt());
+				for (contador=1;contador<=cantidadestudiantes;contador++) {
+					alert("Por favor ingrese la calificacion del estudiante numero "+contador+" :");
+					alert("Notas entre 0 y 5.");
+					nota = Number(prompt());
+					if (nota<4) {
+						// Almacena la cantidad de usuarios perdiendo
+						acumulador = acumulador+1;
+					}
+				}
+				document.write("La cantidad de estudiantes que REPROBARON la materia es: ",acumulador,'<br/>');
+				document.write("Esto representa un porcentaje de: ",(acumulador*100)/cantidadestudiantes," %.",'<br/>');
+			}
+			porcentajeperdidamateria();
+		</script>
+        
+    
+</body>
+</html>
