@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Determinar si un numero es primo o par</title>
+</head>
+<body>
+        <script type="text/javascript">
+			
+			function primospares() {
+				var i, verprimo, verprimo1;
+				
+				var numentrada = new Number();
+				var estadoprimo = new Boolean();
+				var estadopar = new Number();
+				alert("Por favor ingrese un numero para verificar si es par o impar y si es primo: ",'<br/>');
+				numentrada = Number(prompt());
+				if (numentrada==2) {
+					alert("El numero ingresado es PAR y es PRIMO.");
+				} else {
+					estadopar = numentrada%2;
+					if (estadopar==0) {
+						alert("El numero ingresado es PAR.");
+					} else {
+                        if(numentrada==7 || numentrada==11 || numentrada==13 || numentrada==17 || numentrada==19 || numentrada==23){
+                            alert("El numero ingresado es PRIMO e IMPAR.");   
+                        }else{
+                        verprimo = Math.sqrt(numentrada);
+                        console.log(verprimo);
+						
+                        verprimo1 = Math.trunc(verprimo);
+                        console.log(verprimo1);
+						
+						for (i=3;i<=verprimo1;i+=2) {
+							if (numentrada%i!=0) {
+								estadoprimo = true;
+                            }
+                            console.log(numentrada);
+                            console.log(i);
+						}
+						if (estadoprimo==true) {
+							//alert("El numero ingresado NO es PRIMO y es IMPAR.");
+							alert("El numero ingresado es PRIMO e IMPAR.");
+						} else {
+                            
+                            //alert("El numero ingresado es PRIMO e IMPAR.");
+                            alert("El numero ingresado NO es PRIMO y es IMPAR.");
+                        }
+                    }
+					}
+                }
+                document.write("Calcular si un numero es primo o par",'<br/>');
+			}
+			primospares();
+		</script>
+</body>
+</html>

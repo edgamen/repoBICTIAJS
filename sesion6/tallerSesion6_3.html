@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promedio edades</title>
+</head>
+<body>
+        <script type="text/javascript">
+		
+			function promedadfor() {
+				var cantidadpersonas = new Number();
+				var contador = new Number();
+				var edad = new Number();
+				var edades = new Number();
+				cantidadpersonas = 0;
+				document.write("Calcular el promedio de edad en un grupo de varias personas.",'<BR/>');
+				alert("Por favor ingrese la cantidad de personas a promediar:");
+				cantidadpersonas = Number(prompt());
+				for (contador=1;contador<=cantidadpersonas;contador++) {
+					alert("Ingrese la edad de la persona numero "+contador+", porfavor:");
+					edad = Number(prompt());
+					// Acumula la suma de las edades
+                    edades = edades+edad;
+                    console.log(edades);
+                    promedio = edades/cantidadpersonas;
+                    console.log(promedio);
+				}
+				alert("El promedio es: "+edades/cantidadpersonas);
+			}
+			promedadfor();
+		</script>
+    
+</body>
+</html>
