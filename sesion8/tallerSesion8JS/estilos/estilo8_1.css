@@ -1,0 +1,15 @@
+body{
+    background-color: cadetblue;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+    color: midnightblue;
+}
+#reproVideo{
+    text-align: center;
+    
+}
+#videoUno{
+    width: 50%;
+}

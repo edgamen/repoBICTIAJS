@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos/estilo8_1.css">
+    <title>Taller Sesion 8 Bootcamp BICTIA JS</title>
+</head>
+<body>
+    <header>
+        <h1>Manipular video con Javasript</h1>
+    </header>
+    <main>
+        <div id="reproVideo">
+            <video id="videoUno" src="videos/pruebaVideo.mp4" controls>
+            </video><br><br>
+            <button onclick="playVideo()">Reproducir video</button> 
+            <button onclick="stopVideo()">Detener video</button><br><br>
+            <button onclick="noVolume()" type="button">Sin volumen</button>
+            <button onclick="setHalfVolume()" type="button">Volumen medio</button>
+            <button onclick="setFullVolume()" type="button">Todo el volumen</button><br><br>
+            <button onclick="getVolume()" type="button">Cual es el volumen?</button>
+              
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script> 
+            var myVideo = document.getElementById("videoUno"); 
+            
+            function playVideo() { 
+                if (myVideo.paused) 
+                    myVideo.play(); 
+                else 
+                    myVideo.pause(); 
+            } 
+            
+            function stopVideo() { 
+                myVideo.pause(); 
+            } 
+            var vid = document.getElementById("videoUno");
+
+function noVolume() { 
+    vid.volume=0;
+} 
+  
+function setHalfVolume() { 
+    vid.volume = 0.2;
+} 
+  
+function setFullVolume() { 
+    vid.volume = 1.0;
+} 
+function getVolume() { 
+    alert(vid.volume);
+    
+} 
+            
+    </script> 
+</body>
+</html>
