@@ -18,12 +18,35 @@
                 <button onclick="delOddDivs()">Borrar DIV impar</button> <br>
                 <button onclick="delSelectedDivs()">Borrar DIV seleccionado</button><br>
         </div>
+        <div id="papa">
+
+            
+        </div>
 
 
     </main>
     <footer>
 
     </footer>
-    
+    <script>
+            var cajas = document.getElementById("papa");
+            
+            function addDivs() { 
+                var elemento = document.createElement("div");
+                var ref = document.getElementsByTagName("div")[0];
+            } 
+              
+            function eraseAllDivs() { 
+                vid.volume = 0.2;
+            } 
+              
+            function delOddDivs() { 
+                vid.volume = 1.0;
+            }
+
+            function delSelectedDivs() { 
+                vid.volume = 1.0;
+            } 
+            </script> 
 </body>
 </html>

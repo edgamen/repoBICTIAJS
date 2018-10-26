@@ -10,3 +10,11 @@ main{
 
     text-align: center;
 }
+div {
+    width: 40%;
+    height: 20%;
+    background: yellow;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid black;
+}
