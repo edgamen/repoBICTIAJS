@@ -12,9 +12,34 @@
                 <h1>Acercar - Alejar</h1>
         </header>
         <main>
-            <div id="slider">
-                                
-             </div>
+                <div id="container"> 
+                         
+                        <button onclick="makeBig()">Zoom In</button>
+                        <button onclick="makeSmall()">Zoom Out</button>
+                        <button onclick="makeNormal()">Normal</button>
+                        <br><br>
+                        <img src="img3.jpg" alt="Imagen NASA" id="imagen">
+                      </div> 
+                      
+                      <script> 
+                      var laImagen = document.getElementById("imagen"); 
+                      
+                      
+                      
+                      function makeBig() { 
+                          
+                          laImagen.width = 800; 
+                          
+                      } 
+                      
+                      function makeSmall() { 
+                          laImagen.width = 200; 
+                      } 
+                      
+                      function makeNormal() { 
+                          laImagen.width = 400; 
+                      } 
+                      </script> 
                 
                 
         </main>

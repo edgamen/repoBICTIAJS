@@ -1,0 +1,15 @@
+body{
+    background-color: ivory;
+    color: lawngreen;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+}
+main{
+
+    text-align: center;
+}
+img{
+    transition-duration: 3s;
+}

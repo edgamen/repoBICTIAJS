@@ -10,3 +10,24 @@ main{
 
     text-align: center;
 }
+.cajitas{
+    display: inline-block;
+    width: 15%;
+    height: 40px;
+    border: 1px solid black;
+}
+#uno{
+    background-color: #f5f5f5;
+}
+#dos{
+    background-color: #23365a;
+}
+#tres{
+    background-color: #ca8a12;
+}
+#cuatro{
+    background-color: #648d19;
+}
+#cinco{
+    background-color: #500f5e;
+}
