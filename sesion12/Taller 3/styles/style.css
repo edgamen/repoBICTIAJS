@@ -56,6 +56,48 @@ header{
     position: fixed;
     width: 100%;
     z-index: 1000;}
+    .black{
+        position:fixed;
+        top:0;
+        
+        
+        
+      }
+      .black ul{
+        list-style-type:none;
+        padding:0;
+      }
+      
+      .black ul li{
+        display:inline-block;
+        /*width:100%;*/
+        color:#fff;
+      }
+      
+      .blue{
+        position:fixed;
+        top:0;
+        background:#fff;
+        color:black;
+        width:100%;
+        height:50px;
+      }
+/*.white{
+        position:fixed;
+        top:0;
+        background:#333;
+        width:100%;
+        height:50px;
+        
+      }
+.wb{
+        position:fixed;
+        top:0;
+        background:#fff;
+        color:black;
+        width:100%;
+        height:50px;
+      }*/
 nav ul{
     display: flex;}
 nav ul li{
@@ -81,16 +123,28 @@ a{
     grid-gap: 10px;
     margin-top: 2.5em;
     margin-bottom: 2.5em;}
+.service-img{
+    /*width: 90%;**/
+    transition: 2s;
+        
+    }  
+.service-img:hover{
+    width: 90%;
+    
+}
 .service-img-wrapper{
     position: relative;
     width:100%;
     height: 280px;
     overflow: hidden;
     -webkit-box-shadow: 1px 0 2.5px 1px #000;
-    box-shadow: 1px 0 2.5px 1px #000;}
+    box-shadow: 1px 0 2.5px 1px #000;
+    transition: 2s;}
+    
 .service-img-wrapper img{
     width: 100%;
-    position: absolute;}
+    position: absolute;
+    transition: 2s;}
 .signup{
     padding: 5px 25px;
     background-color: #ff4757;
