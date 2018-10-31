@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var js = {
+            instituto: "bictia",
+            instructor: "kamilo",
+            alumnos: 23,
+            intro: function (){
+                console.log("Bienvenidos a "+ this.instituto + "su instructor sera "+ this.instructor +
+                 "y estara a cargo de "+ this.alumnos+ " estudiantes");
+                
+            },
+            empresas: "rappi",
+        };
+
+        console.log(js["instituto"]);
+        console.log(js.instructor);
+        console.log(js.intro);
+
+        
+        var muchos_json_dentro = [{
+            nombre: "pipo",
+            edad:16
+        },{nombre:"pipon", edad:19}, {nombre:"fulano",edad:27}];
+        console.log(muchos_json_dentro);
+
+
+        document.cookie="usuario = pipo;";
+        document.cookie= "nombre=hijo de pipo";
+        //Leer cookie
+        var miCookie= document.cookie;
+        alert(miCookie);
+        //Modificar cookie
+        document.cookie= "usuario = kamilo;";
+
+
+        
+    </script>
+
+</body>
+</html>
