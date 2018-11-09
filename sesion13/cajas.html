@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script type="text/javascript">
+    var ahora=new Date();
+    var yyyy = ahora.getFullYear();
+    var mm = ahora.getMonth() + 1;
+    if (10 > mm) mm = '0' + mm;
+    var dd = ahora.getDate();
+    if (10>dd) dd='0'+dd;
+    document.write(dd+'-'+mm+'-'+yyyy);
+    </script>
+</head>
+<body>
+<header>
+
+</header>
+<main>
+    Prueba de texto
+    <img src="img/hangingSpider1.png" alt="" >
+    <aside id="reloj">
+
+
+    </aside>
+
+</main>
+<footer>
+        <p id="pHoras"></p>
+        <p>:</p>
+        <p id="pMinutos"></p>
+        <p>:</p>
+        <p id="pSegundos"></p>
+</footer>
+  
+    <script type="text/javascript" src="main.js">
+    </script>  
+</body>
+</html>
