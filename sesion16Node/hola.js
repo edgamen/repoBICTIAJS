@@ -7,8 +7,15 @@ var controlador = function(peticion,respuesta){
     for (contador=1;contador=10;contador++){
         setInterval('mensaje()',2000);
     }*/
-    setTimeout('console.log("Yo no me llamo Javier!! No!!")', 2000);
-    console.log("Yo no me llamo Javier!!");
+    for (i = 1; i <= 5; ++i) {
+        setDelay(i);
+      }
+      
+      function setDelay(i) {
+        setTimeout(function(){
+          console.log(i);
+        }, 2000);
+      }
     //respuesta.end("Welcome to Node!");
 }
 
