@@ -8,5 +8,12 @@ var http = require('http');
             var html_string= html.toString();
             var arreglos_param = [], parametros = {};
             var variables = html_string.match(/[^\{\}]+(?=\})/g);
+            if(req.url.indexOf("?")>0){
+                var url_data = req.url.split("?")
+                var arreglos_param = url_data[1].split("&")
+
+            }
+
+            for(var i = arre)
         })
     }
