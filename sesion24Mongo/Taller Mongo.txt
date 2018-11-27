@@ -1,0 +1,135 @@
+
+Punto 1: Obtener todos los documentos
+db.movies.insert([
+    {
+	titulo : 'Assassin´s Creed',
+	Director: 'Justin Kurzel',
+	año : 2016
+    },
+
+    {
+	titulo : 'El cadáver de la novia',
+	director: 'Tim Burton',
+	año : 2005,
+	actores : ['Johnny Depp','Helena Bonham - Carter']
+	},
+
+   {
+	titulo : 'Avatar',
+	director: 'James Cameron',
+	año : 2005,
+	actores : ['Sam Worthington','Zoe Saldaña', 'Sigourney Weaver'],
+	},
+
+	{
+	titulo : 'Tomb Raider',
+	director: 'Roar Uthaug',
+	año : 2018,
+	actores : ['Alicia Vikander','Dominic West'],
+ 	},
+
+ 	{
+	titulo : 'Deadpool',
+	director: 'Tim Miller',
+	año : 2016,
+	actores : ['Ryan Reynolds','Morena Bacarin'],
+	},
+
+	{
+	titulo : 'El joven manos de Tijeras',
+	director: 'Tim Burton',
+	año : 1990,
+	actores : ['Johnny Depp','Winona Ryder'],
+	},
+
+	{
+	titulo : 'Sin City',
+	director: 'Quentin Tarantino',
+	año: 2005,
+	actores : ['Bruce Willis','Jessica Alba'],
+	},
+
+	{
+	titulo : 'Piratas del Caribe El cofre de la Muerte',
+	director: 'Gore Verbinski',
+	año: 2006,
+	actores : ['Johnny Depp','Orlando Bloom','Keira Knightley'],
+	},
+
+	{
+	titulo : 'El señor de los Anillos las Dos Torres',
+	director: 'Peter Jackson',
+	año: 2005,
+	actores : ['Orlando Bloom','Elijah Wood','Ian McKellen'],
+	},
+
+	{
+	titulo : 'X-Men Dias del Futuro Pasado',
+	director: 'Brian Singer',
+	año : 2014,
+	actores : ['Ian McKellen','Hugh Jackman']
+	}
+
+])
+usar la base y creala:
+use movies
+confirmar la base seleccionada
+db
+
+Punto 1: Obtener todos los documentos
+db.movies.find().pretty()
+
+Punto 2: Obtener todos los documentos
+db.movies.find({director:"Tim Burton"})
+
+Punto 3: Obtener documentos con actores que incluyan a "Ian McKellen
+db.movies.find({actores:"Ian McKellen"})
+
+Punto 4: Obtener documentos con año mayor a "2013"
+db.movies.find({año:{$gt:2013}})
+
+Punto 5: Obtener todas las películas de los 90s.
+db.movies.find({año:{$gte:1990,$lte:1999}})
+
+Punto 6: Obtener las películas estrenadas entre el año 2000 y 2010.
+db.movies.find({año:{$gte:2000,$lte:2010}})
+
+
+extras: seleccionar dos valor del año
+db.movies.find({$or: [{ año:{2000}},{ año:{2010}}]})
+
+-----
+Actualizar Documentos
+-----
+db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)
+>db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}})
+
+
+1. Agregar actores a nombre: ´Assassin´s Creed´
+
+db.movies.update({'titulo':'Assassin´s Creed'},{$set:{'actores':'actor 1'}})
+
+2. Agregar sinopsis a "Deadpool"
+db.movies.update({'titulo':'Deadpool'},{$set:{'sinopsis':'cuarta pared'}})
+
+db.movies.update({'titulo':'Assassin´s Creed'},{$set:{'actores':'actor 1'}})
+
+3. Agregar una actor llamado "Tim Owen" a la película "Sin City"
+
+db.movies.update({'titulo':'Sin City'},{$push:{'actores':'Tim Owen'}})
+
+4.Agregar género a cada película
+
+db.movies.update(
+	{$set:{'genero':'acciòn'}})
+
+
+}
+)
+
+
+---- Extras ---
+
+var listaActores = ('Marion Cotillard','Michael Fassbender')
+
+db.movies.insert({'titulo':'Assassin´s Creed'},{$set:{actores:listaActores}})
