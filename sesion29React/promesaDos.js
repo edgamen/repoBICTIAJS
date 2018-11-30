@@ -5,25 +5,24 @@ function asincrono(valor, ejecucion) {
     }, 0 | Math.random() * 100)
 }
 
-let max = 10;
-let cnt = 0;
+var max = 10;
+var cnt = 0;
 
-for (let i = 0; i < max; i++) {
+for (var i = 0; i < max; i++) {
 
-    let promesa = new Promise((resolved, reject) => {
+    var promesa = new Promise((resolved, reject) => {
 
         return ((asincrono(i, function (valor, resultado) {
             console.log(`Finaliza con el valor = ${valor} y el resultado = ${resultado}`)
             if (++cnt === max) {
                 console.log('Éxito')
             }
-        }))) ? reject(new Error('Error al correr')) : resolved(true);
+        }))) ? reject(new Error('Error al ejecutar')) : resolved(true);
 
     })
 
 }
 
-promise.then((resolve) => {}).catch((err) => {
+promesa.then((resolve) => {}).catch((err) => {
     console.log(err.message)
 })
-
