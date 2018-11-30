@@ -4,40 +4,26 @@ function asincrono(valor, ejecucion) {
         ejecucion(valor, valor * valor)
     }, 0 | Math.random() * 100)
 }
-var max = 10;
-var cnt = 0;
-for (var i = 0; i < max; i++) {
-    asincrono(i, function (valor, resultado) {
-        console.log(`Finaliza con el valor = ${valor} y el resultado = ${resultado}`)
-        if (++cnt === max) {
-            console.log('Éxito')
-        }
-    });
+
+let max = 10;
+let cnt = 0;
+
+for (let i = 0; i < max; i++) {
+
+    let promesa = new Promise((resolved, reject) => {
+
+        return ((asincrono(i, function (valor, resultado) {
+            console.log(`Finaliza con el valor = ${valor} y el resultado = ${resultado}`)
+            if (++cnt === max) {
+                console.log('Éxito')
+            }
+        }))) ? reject(new Error('Error al correr')) : resolved(true);
+
+    })
+
 }
 
-
-
-
-
-var http = require('http')
-var promesa = new Promise((resolve, reject)=>{
-    console.log('Iniciado Promesas')
-    
-})
-
-promesa.then(function(res){
-    console.log('Puerto activo 8080 / Escuchando peticiones')
-    res.end('Bienvenido')
-}).catch(function(err){
+promise.then((resolve) => {}).catch((err) => {
     console.log(err.message)
 })
 
-
-
-let promesa=new Promise((res,rej)=>{
-    res(`Exito procesando datos`)
-})
-
-promesa.then((resultado)=>{
-    console.log(resultado)
-})
